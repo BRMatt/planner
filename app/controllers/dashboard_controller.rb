@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
     @next_session = Sessions.next
     @next_course = Course.next
     @sponsors = Sponsor.latest
+    @all_sponsors = Sponsor.all_sponsors
     @meeting = Meeting.next
   end
 

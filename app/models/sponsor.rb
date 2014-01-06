@@ -5,5 +5,7 @@ class Sponsor < ActiveRecord::Base
 
   validates :name, :address, :avatar, :website, :seats, presence: true
 
-  scope :latest, -> { order("updated_at desc").limit(7) }
+  scope :latest, -> { order("updated_at desc").limit(6) }
+  scope :all_sponsors, -> { order("updated_at desc").all }
+
 end
